@@ -2,7 +2,7 @@ import react from 'react';
 import './CharacterDetail.css'
 import EpisodeList from './EpisodeList';
 
-const CharacterDetail = ({character}) => {
+const CharacterDetail = ({character, episodes}) => {
   return (
     <div  id="characterDetail">
     <div id="detailWrapper">
@@ -20,7 +20,7 @@ const CharacterDetail = ({character}) => {
     </div>
 
     <div id="episode-list-wrapper">
-    
+      <EpisodeList episodes={episodes} />
     </div>
   </div>
   )
