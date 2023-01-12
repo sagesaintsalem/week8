@@ -1,6 +1,15 @@
 import {useState, useEffect} from "react";
+import styled from 'styled-components'
 import LaunchSelector from "../components/LaunchSelector";
 import LaunchDetails from "../components/LaunchDetails";
+
+const Title = styled.h1`
+  text-align: center;
+  font-size: 1.5em;
+  color: #fff;
+  background-color: #062c43;
+  margin: 0;
+  padding: 1em`
 
 const LaunchContainer = () => {
 
@@ -33,7 +42,7 @@ const LaunchContainer = () => {
 
   return (
     <>
-      <h1>SpaceX Launch Details</h1>
+      <Title>SpaceX Launch Details</Title>
       <LaunchSelector 
         launchIncrease={increaseSelectedLaunch}
         launchDecrease={decreaseSelectedLaunch}

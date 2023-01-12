@@ -1,7 +1,7 @@
 import {useState, useEffect} from "react";
 
-const Search = () => {
-    const [searchResults, setsearchResults] = useState([]);
+const Search = ({ filterData }) => {
+    // const [searchResults, setsearchResults] = useState([]);
     const [term, setTerm] = useState("");
 
     const handleInput = function(event){
@@ -9,6 +9,9 @@ const Search = () => {
         setTerm(term);
     }
 
+    useEffect(() => {
+        filterData(term);
+    },[term])
 
     return (
         <div className='search-area'>
@@ -16,9 +19,6 @@ const Search = () => {
                 <input type="text" placeholder="Search" onChange={handleInput} value={term}/>
                 <button type='submit'>Go!</button>
             </form>
-            <ul className='search-results'>
-                <li>Placeholder</li>
-            </ul>
         </div>
     )
 

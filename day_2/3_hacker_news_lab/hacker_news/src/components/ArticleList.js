@@ -9,7 +9,7 @@ const ArticleList = ({articles}) => {
 
     return (
         <div>
-            <ul>
+            <ul className="listOfArticles">
                 {listArticles}
             </ul>
         </div>
